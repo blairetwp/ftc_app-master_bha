@@ -113,6 +113,11 @@ public class PushbotTeleopTank_Buttons_Poirier extends OpMode{
             robot.leftMotor.setPower(1);
             robot.leftMotor.setPower(1);
         }
+        else {
+            //If no buttons are pressed, set power to 0
+            robot.leftMotor.setPower(0);
+            robot.rightMotor.setPower(0);
+        }
 
     }
 
@@ -121,6 +126,9 @@ public class PushbotTeleopTank_Buttons_Poirier extends OpMode{
      */
     @Override
     public void stop() {
+        // If driver hits STOP, set all motors power to 0
+        robot.leftMotor.setPower(0);
+        robot.rightMotor.setPower(0);
     }
 
 }
