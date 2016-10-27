@@ -116,11 +116,13 @@ public class PushbotAutoDriveByTime_Linear_Poirier extends LinearOpMode {
             telemetry.update();
         }
 
-        // Step 4:  Stop and close the claw.
+
+        // Step 4:  Stop and close the claw. (CLAW commented out)
         robot.leftMotor.setPower(0);
         robot.rightMotor.setPower(0);
-        robot.leftClaw.setPosition(1.0);
-        robot.rightClaw.setPosition(0.0);
+        //robot.leftClaw.setPosition(1.0);
+        //robot.rightClaw.setPosition(0.0);
+
 
         telemetry.addData("Path", "Complete");
         telemetry.update();
